@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>My Cryptoportfolio | CryptoPortfolio WebPage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+  <header class="header">
+    <a href="" class="logo" title="Cryptoportfolio">CryptoPortfolio (Team 15)</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li><a id="chart-link" href="javascript:void(0)" onclick="toggleSegmentDisplay('.chart')" title="xx">xxChartxx</a>
+      </li>
+      <li><a id="edit-portfolio-link" href="javascript:void(0)" onclick="toggleSegmentDisplay('.edit-portfolio')"
+          title="xx">xxEdit Portfolioxx</a></li>
+      </li>
+      <li> <select id="lang-selection" onchange="changeAppLanguage()">
+          <option value="en">en</option>
+          <option value="tel">tel</option>
+          <option value="hin">hin</option>
+        </select></li>
+      </ul>
+        <a id="forum-link">xxMorexx</a> 
+        <a id="faq-link" >xxFAQxx</a>
+  </header>
+  <main class="main">
+    <div id="alert">
+      <span class="alert-close-btn" onclick="closeAlert()">&times;</span>
+      <span id=alert-text></span>
+    </div>
+    <div id="display-portfolio"></div>
+    <div class="chart">
+      <button id="chart-button" onclick="toggleSegmentDisplay('.chart')" class="close" title="xx"
+        aria-label="Close the Chart">&times;</button>
+      <h1 id="chart-heading" title="xx">xxPortfolio Weighting</h1>
+      <canvas id="chart-canvas"></canvas>
+    </div>
+    <div class="edit-portfolio"></div>
+  </main>
+  <script src="data/coinlist-min.js"></script>
+  <script src="data/coinPricesExample.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+  <script src="data/translations.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
